@@ -1,0 +1,97 @@
+/* team ==========================================
+
+.team-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+.team-list__item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  width: 269px
+  padding: 25px 15px 30px
+  text-align: center
+  border-top: 4px solid transparent
+  &:hover
+    background-color: #f0f0f0
+    border-color: #f39c12
+    .team-list__job:after
+      background-color: #e74c3c
+  .social
+    margin-top: auto
+
+.team-list__img
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-flex: 0
+  -ms-flex: none
+  flex: none
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  font-size: 62px
+  background-color: #e8f8f4
+  width: 200px
+  height: 200px
+  border-radius: 50%
+  border: 6px solid #f2f2f2
+  position: relative
+  margin: 0 auto 25px
+  color: #fff
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    left: -7px
+    top: -7px
+    width: 202px
+    height: 202px
+    border-radius: 50%
+    border: 1px solid #e6e6e6
+  img
+    height: 100%
+    width: 100%
+    border-radius: 50%
+    display: block
+
+.team-list__job
+  color: #999999
+  font-family: 'Lato', sans-serif
+  font-size: 15px
+  font-weight: 400
+  &:after
+    content: ''
+    display: block
+    margin: 10px auto 15px
+    width: 20px
+    height: 4px
+    background-color: #cccccc
+
+.team-list__item p
+  line-height: 28px
+  color: #737373
+  font-size: 16px
+  margin-bottom: 25px
+
+.social__link
+  font-size: 18px
+  color: #999999
+  display: inline-block
+  vertical-align: middle
+  margin-right: 12px
+  &:last-child
+    margin-right: 0
+  &:hover
+    color: #f39c12
