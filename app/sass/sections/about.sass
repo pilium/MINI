@@ -1,0 +1,172 @@
+/* Heading ==========================================
+
+.heading
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-align-items: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  margin: 0 auto 150px
+  h2
+    width: 200px
+    -webkit-box-flex: 0
+    -ms-flex: none
+    flex: none
+    text-align: right
+    position: relative
+    margin-right: 40px
+    &:after
+      content: ''
+      display: block
+      width: 4px
+      height: 45px
+      background-color: #f39c12
+      position: absolute
+      left: 100%
+      top: 50%
+      margin-top: -22px
+      margin-left: 19px
+  p
+    -webkit-box-flex: 1
+    -ms-flex: 1
+    flex: 1
+    color: #4d4d4d
+    font-size: 16px
+    font-weight: 400
+    line-height: 25px
+    text-transform: uppercase
+
+/* About ==========================================
+
+.about-wrap
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+
+.about-wrap-content
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  -webkit-box-flex: 1
+  -ms-flex: 1
+  flex: 1
+
+.about-wrap-content__icon
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  width: 125px
+  height: 125px
+  -webkit-box-flex: 0
+  -ms-flex: none
+  flex: none
+  font-size: 40px
+  margin-right: 29px
+  border: 2px solid #f39c12
+  background-color: #ffffff
+  border-radius: 50%
+
+.about-wrap-content__text
+  h6
+    margin-bottom: 20px
+  p
+    color: #737373
+    font-size: 16px
+    font-weight: 400
+    line-height: 28px
+  .about-text
+    line-height: 28px
+    color: #e74c3c
+    font-size: 20px
+    font-weight: 300
+    margin-bottom: 25px
+
+.about-wrap-img
+  position: relative
+  margin-left: 60px
+  img
+    max-width: 100%
+    display: block
+
+.about-wrap-img__icon
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  font-size: 32px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+
+/* box-skills ==========================================
+
+.box-skills
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.box-skills__item
+  -webkit-box-flex: 1
+  -ms-flex: 1
+  flex: 1
+  width: 50%
+
+.box-skills__item--img
+  img
+    display: inline-block
+    max-width: 100%
+  padding-right: 50px
+  text-align: right
+
+.box-skills__item--content
+  padding-left: 40px
+
+/* bars ==========================================
+
+.box-bars
+  margin-top: 60px
+
+.bars
+  margin-bottom: 35px
+
+.bars__title
+  font-size: 16px
+  line-height: 22px
+  text-transform: uppercase
+  color: #0d0d0d
+  font-weight: 600
+  margin-bottom: 10px
+  span
+    color: #bfbfbf
+    font-weight: 600
+  .procent
+    color: #0d0d0d
+    font-weight: 300
+
+.bars-line
+  height: 10px
+  background: #e7e7e7
+  > div
+    height: 10px
+    background: #f49d09

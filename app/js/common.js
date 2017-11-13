@@ -1,5 +1,8 @@
+'use strict';
+
 $(function() {
-
-	// Custom JS
-
+  $('.banner-slider').slick({
+    arrows: false,
+    dots: true,
+  });
 });
