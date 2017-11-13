@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp'),
   gutil = require('gulp-util'),
   sass = require('gulp-sass'),
@@ -21,14 +23,14 @@ var gulp = require('gulp'),
 // Работа с Pug
 gulp.task('pug', function() {
   return gulp.src('app/pug/pages/*.pug')
-		.pipe(plumber())
-		.pipe(pug({
-  pretty: true //минификация: False
-}))
-		.on('error', notify.onError(function(error) {
-  return 'Message to the notifier: ' + error.message;
-}))
-		.pipe(gulp.dest('app'));
+    .pipe(plumber())
+    .pipe(pug({
+      pretty: true //минификация: False
+    }))
+    .on('error', notify.onError(function(error) {
+      return 'Message to the notifier: ' + error.message;
+    }))
+    .pipe(gulp.dest('app'));
 });
 
 // Работа с JS
@@ -36,11 +38,11 @@ gulp.task('js', function() {
   return gulp.src([
     'app/js/common.js' // Всегда в конце
   ])
-		.pipe(plumber())
-		.pipe(concat('scripts.min.js'))
-		.pipe(uglify()) // Минимизировать весь js (на выбор)
-		.pipe(gulp.dest('app/js'))
-		.pipe(browserSync.reload({stream: true}));
+    .pipe(plumber())
+    .pipe(concat('scripts.min.js'))
+    .pipe(uglify()) // Минимизировать весь js (на выбор)
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 
@@ -56,12 +58,12 @@ gulp.task('browser-sync', function() {
 // Работа со стилямми
 gulp.task('sass', function() {
   return gulp.src('app/sass/main.sass')
-		.pipe(sass({outputStyle: 'expand'}).on('error', notify.onError()))
-		.pipe(rename({suffix: '.min', prefix: ''}))
-		.pipe(autoprefixer(['last 15 versions']))
-		.pipe(cleanCSS()) // Опционально, закомментировать при отладке
-		.pipe(gulp.dest('app/css'))
-		.pipe(browserSync.reload({stream: true}));
+    .pipe(sass({outputStyle: 'expand'}).on('error', notify.onError()))
+    .pipe(rename({suffix: '.min', prefix: ''}))
+    .pipe(autoprefixer(['last 15 versions']))
+    //.pipe(cleanCSS()) // Опционально, закомментировать при отладке
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 
@@ -77,8 +79,8 @@ gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function() {
 // Минификация изображений
 gulp.task('imagemin', function() {
   return gulp.src('app/img/**/*')
-		.pipe(cache(imagemin()))
-		.pipe(gulp.dest('dist/img'));
+    .pipe(cache(imagemin()))
+    .pipe(gulp.dest('dist/img'));
 });
 
 // Сборка спрайтов PNG
@@ -88,15 +90,15 @@ gulp.task('cleansprite', function() {
 
 gulp.task('spritemade', function() {
   var spriteData =
-			gulp.src('app/img/sprite/*.*')
-				.pipe(spritesmith({
-  imgName: '../img/sprite/sprite.png',
-  cssName: '_sprite.sass',
-  padding: 15,
-  cssFormat: 'sass',
-  algorithm: 'binary-tree',
+   gulp.src('app/img/sprite/*.*')
+     .pipe(spritesmith({
+       imgName: '../img/sprite/sprite.png',
+       cssName: '_sprite.sass',
+       padding: 15,
+       cssFormat: 'sass',
+       algorithm: 'binary-tree',
 
-}));
+     }));
 
   spriteData.img.pipe(rename('sprite.png')).pipe(gulp.dest('app/img/sprite/')); // путь, куда сохраняем картинку
   spriteData.css.pipe(gulp.dest('app/sass/')); // путь, куда сохраняем стили
@@ -145,7 +147,7 @@ gulp.task('deploy', function() {
     'dist/.htaccess',
   ];
   return gulp.src(globs, {buffer: false})
-		.pipe(conn.dest('/path/to/folder/on/server'));
+    .pipe(conn.dest('/path/to/folder/on/server'));
 
 });
 
