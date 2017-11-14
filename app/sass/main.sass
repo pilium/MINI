@@ -1,5 +1,7 @@
-@import "libs"
 @import "preloader"
+@import "libs"
+
+
 
 *::-webkit-input-placeholder
 	color: #666
@@ -17,16 +19,10 @@
 	color: #666
 	opacity: 1
 
+*,
 *:after,
 *:before
     box-sizing: border-box
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
 
 html, body
 	height: 100%
@@ -52,6 +48,13 @@ ul
 p
 	margin: 0
 	line-height: 28px
+
+h1,h2,h6
+  margin: 0
+
+input,textarea
+  outline: none
+  box-sizing: border-box
 
 h1
   color: #ffffff
@@ -109,9 +112,19 @@ h6
   background: url("../img/quote-bg.png") no-repeat center top
   background-size: cover
 
+.hide
+  position: absolute
+  left: 0
+  top: 0
+  height: 0
+  width: 0
+  overflow: hidden
+  z-index: -1
+  opacity: 0
+
 .hr
   height: 2px
-  margin: 120px 0
+  margin: 100px 0
   background-color: #e6e6e6
 
 
@@ -120,13 +133,14 @@ h6
 .btn
   display: inline-block
   vertical-align: middle
-  height: 28px
+  height: 38px
   padding: 11px 35px 0
   border: 2px solid #ffffff
   background-color: transparent
   color: #fff
   font-family: "Open Sans", Arial, sans-serif
   font-size: 16px
+  font-style: italic
   font-weight: 600
   text-transform: uppercase
   text-decoration: none
@@ -260,5 +274,36 @@ header
 @import 'sections/about'
 @import 'sections/quote'
 @import 'sections/team'
+@import 'sections/facts'
+@import 'sections/services'
+@import 'sections/testimonial'
+@import 'sections/portfolio'
+@import 'sections/blog'
+@import 'sections/clients'
+@import 'sections/contact'
+@import 'sections/map'
+
+// ---------------------------------------------------------------------------------------//
+
+// FOOTER  //
+
+.footer-flex
+  display: flex
+  align-items: center
+  padding-top: 40px
+  padding-bottom: 40px
+  .social
+    margin-left: auto
+  .social__link
+    color: #0d0d0d
+    &:hover
+      color: #f39c12
+
+.copyright
+  color: #0d0d0d
+  font-weight: 600
+  font-size: 14px
+  line-height: 18px
+  text-transform: uppercase
 
 @import "media" // Всегда в конце

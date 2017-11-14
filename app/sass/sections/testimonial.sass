@@ -1,0 +1,74 @@
+/* testimonial ==========================================
+
+.testimonial-slider .slick-dots
+  margin-top: 26px
+
+.testimonial
+  text-align: center
+  color: #fff
+
+.testimonial__text
+  margin: 35px 0 25px
+  color: #ffffff
+  font-size: 22px
+  font-weight: 300
+  font-style: italic
+  line-height: 30px
+
+.testimonial .quote__author
+  &:before
+    display: none
+  &:after
+    content: ""
+    display: block
+    width: 50px
+    height: 4px
+    margin: 20px auto 0
+    background-color: #f39c12
+
+.testimonial__avatar
+  width: 104px
+  height: 104px
+  margin: 0 auto
+  border-radius: 50%
+  overflow: hidden
+  img
+    display: block
+    width: 100%
+
+.nav-tab-list
+  list-style: none
+  text-align: center
+  margin-bottom: 80px
+
+.nav-tab-list__item
+  display: inline-block
+  &.active .nav-tab-list__link
+    color: #f39c12
+  &:after
+    content: '\\\\'
+    display: inline-block
+    vertical-align: middle
+    font-size: 14px
+    font-weight: 700
+    line-height: 25px
+    color: #a6a6a6
+    margin: 0 18px
+  &:last-child:after
+    display: none
+
+.nav-tab-list__link
+  font-size: 14px
+  font-weight: 700
+  line-height: 25px
+  text-transform: uppercase
+  color: #0d0d0d
+  &:hover
+    color: #f39c12
+
+.tab-cont
+  opacity: 1
+  -webkit-transition: opacity 0.4s
+  transition: opacity 0.4s
+  &.hide
+    opacity: 0

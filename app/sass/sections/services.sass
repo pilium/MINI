@@ -1,0 +1,140 @@
+/* service ==========================================
+
+.service-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  text-align: center
+  margin: 0 -15px
+
+.service-list__item
+  padding: 0 15px
+  &:hover .service-list__icon
+    background: #f39c12
+    [class*="icon"]:before
+      color: #fff
+
+.service-list__icon
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  width: 105px
+  height: 105px
+  margin: 0px auto 30px
+  border: 2px solid #f39c12
+  border-radius: 50%
+  color: #fff
+  font-size: 27px
+  -webkit-transition: all 0.3s
+  transition: all 0.3s
+  [class*="icon"]:before
+    color: #0d0d0d
+    -webkit-transition: all 0.3s
+    transition: all 0.3s
+
+.service-list__item
+  h6
+    margin-bottom: 25px
+  p
+    color: #737373
+    font-size: 16px
+    line-height: 28px
+
+/* Pricing ==========================================
+
+.box-pricing
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  .service-list__icon
+    margin-left: 0
+    height: 125px
+    width: 125px
+    font-size: 32px
+
+.pricing
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  text-align: center
+  margin-left: 5%
+  -webkit-box-flex: 0
+  -ms-flex: none
+  flex: none
+
+.pricing__item
+  width: 250px
+  border: 1px solid #e6e6e6
+  &:first-child
+    margin-top: 17px
+    border-right: none
+  &:last-child
+    margin-top: 17px
+    border-left: none
+  &.active
+    border-right: none
+    border-left: none
+    border-top: 17px solid #f39c12
+    border-bottom: 11px solid #e6e6e6
+    background-color: #f2f2f2
+
+.pricing-header
+  padding: 25px 28px
+
+.pricing__item.active .pricing-header
+  background: #f39c12
+
+.pricing-header__title
+  color: #0d0d0d
+  font-size: 22px
+  font-weight: 700
+  line-height: 25px
+  text-transform: uppercase
+
+.pricing__item.active .pricing-header__title
+  color: #fff
+
+.pricing-header__title span:before
+  content: ''
+  display: block
+  width: 50px
+  height: 2px
+  background-color: #f39c12
+  margin: 5px auto
+
+.pricing__item.active .pricing-header__title span:before
+  background: #fff
+
+.pricing-list
+  list-style: none
+  li
+    color: #737373
+    font-size: 15px
+    line-height: 18px
+    padding: 15px
+    border-top: 1px solid #e6e6e6
+    &:last-child
+      border-bottom: 1px solid #e6e6e6
+    &:nth-child(odd)
+      background: #fafafa
+
+.pricing__item.active .pricing-list li:nth-child(odd)
+  background-color: #e6e6e6
+
+.pricing-footer
+  padding: 34px 28px
+
+.pricing__item.active .pricing-footer
+  background: #e6e6e6
+
+.pricing-footer .btn
+  padding: 9px 33px 0

@@ -1,0 +1,141 @@
+/* tweet ==========================================
+
+.tweet
+  text-align: center
+  color: #fff
+
+.tweet-wrap__icon
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  width: 104px
+  height: 104px
+  margin: 0 auto
+  border: 2px solid #ffffff
+  border-radius: 50%
+  img
+    display: block
+
+.tweet-wrap__text
+  margin: 35px 0 6px
+  color: #ffffff
+  font-size: 22px
+  font-weight: 700
+  line-height: 33px
+  a
+    color: #f39c12
+    &:hover
+      text-decoration: underline
+
+.tweet-wrap__time
+  color: #808080
+  font-size: 15px
+  font-weight: 300
+  font-style: italic
+
+/* blog ==========================================
+
+.blog-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+.blog-list__item
+  width: 555px
+  margin-bottom: 60px
+
+.blog-list__img
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  font-size: 58px
+  position: relative
+  height: 300px
+  overflow: hidden
+  background: url('https://picsum.photos/555/300?image=366')
+  &:hover .blog-list__title
+    color: #f39c12
+  img
+    width: 100%
+    display: block
+    min-hegiht: 300px
+
+.blog-list__link
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  z-index: 2
+
+.blog-list__header
+  position: absolute
+  right: 0
+  bottom: 0
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: end
+  -ms-flex-align: end
+  align-items: flex-end
+
+.blog-list__title
+  background: #FFF
+  padding: 25px 20px 10px
+
+.blog-list__icon
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  width: 44px
+  height: 44px
+  background-color: #f39c12
+  font-size: 18px
+  color: #fff
+
+.blog-list__footer
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  padding-top: 20px
+
+.blog-list__date
+  text-align: right
+  color: #808080
+  font-size: 14px
+  font-weight: 400
+  line-height: 24px
+  span
+    display: block
+    white-space: nowrap
+
+.blog-list__info
+  padding: 0 17px 0 40px
+  p
+    padding-bottom: 28px
+    line-height: 28px
+    color: #737373
+    font-size: 16px
