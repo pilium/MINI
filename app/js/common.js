@@ -1,13 +1,36 @@
 'use strict';
 
-// $(window).on('load', function() {
-//   $('.preloader').delay(1000).fadeOut('slow');
-// });
+var images = document.images,
+  imagesTotalCount = images.length,
+  imagesLoadedCount = 0,
+  preloader = document.getElementById('page-preloader'),
+  persDisplay = document.getElementById('percentage');
+
+for (var i = 0; i < imagesTotalCount; i++) {
+  imageClone = new Image();
+  imageClone.onload = imageLoaded;
+  imageClone.onerror = imageLoaded;
+  imageClone.src = images[i].src;
+}
+
+function imageLoaded() {
+  imagesLoadedCount++;
+
+  persDisplay.innerHTML = (( (100 / imagesTotalCount) * imagesLoadedCount ) << 0) + '%';
+
+  if(imagesLoadedCount >= imagesTotalCount) {
+    setTimeout(function() {
+      if(!preloader.classList.contains('done')) {
+        preloader.classList.add('done');
+      }
+    }, 500);
+  }
+}
 
 $(function() {
   $('a').click(function(e) {
     e.preventDefault();
-  })
+  });
 
   $('.tabs a').click(function() {
     $(this).parents('.tab-wrap').find('.tab-cont').addClass('hide');
