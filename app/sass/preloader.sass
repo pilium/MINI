@@ -1,47 +1,34 @@
-// @mixin opacity($opacity)
-// 	opacity: $opacity / 100
-// 	filter: alpha(opacity=$opacity)
+.preloader
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: black
+    z-index: 9999999999
+    transition: all 1s
+    opacity: 1
+    color: white
+    visibility: visible
+    // background: url('http://robinmastromarino.com/images/generics/loader-hd.gif') center no-repeat
+    background-color: #4B5C6C
+    &.done
+        opacity: 0
+        visibility: hidden
+    .loader
+        width: 100%
+        height: 75px
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        line-height: 75px
+        text-align: center
+        font-size: 75px
+    
 
-// .preloader
-// 		position: fixed
-// 		left: 0
-// 		right: 0
-// 		top: 0
-// 		bottom: 0
-// 		z-index: 100500
-// 		background-color: #4D5F70
-// 		.pulse
-// 			position: relative
-// 			left: 50%
-// 			top: 50vh
-// 			margin:
-// 				left: -40px
-// 				top: -40px
-// 			&::after,&::before
-// 				content: ''
-// 				border: 5px solid #323232
-// 				width: 80px
-// 				height: 80px
-// 				border-radius: 500px
-// 				position: absolute
-// 			&::before
-// 				animation: pulse-outer .8s ease-in infinite
-// 			&::after
-// 				animation: pulse-inner .8s linear infinite
-
-
-// @keyframes pulse-outer
-// 	0%
-// 		@include opacity(100)
-// 	50%
-// 		@include opacity(50)
-// 	100%
-// 		@include opacity(0)
-
-// @keyframes pulse-inner
-// 	0%
-// 		@include opacity(0)
-// 		transform: scale(0)
-// 	100%
-// 		@include opacity(100)
-// 		transform: scale(1)
+@keyframes spin
+    0%
+        transform: translate(-50%, -50%) rotate(0deg)
+    100%
+        transform: translate(-50%, -50%) rotate(360deg)
