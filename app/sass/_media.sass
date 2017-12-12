@@ -7,6 +7,8 @@
         p
             font-size: 14px
             line-height: 18px
+    .menu__item
+        margin-left: 20px
     .about-wrap-img
         max-width: 40%
         margin-left: 40px
@@ -28,12 +30,19 @@
     .team-list__item p
         font-size: 14px
         line-height: 22px
+    .pricing
+        margin-left: 3%
+    .pricing__item
+        width: 210px
+    .clients-list__item a 
+        height: 130px
 
 @media only screen and (max-width : 991px)
     .section
         padding: 70px 0
     .hr
         margin: 70px 0
+    
     .about-wrap, .box-skills
         display: block
     .about-wrap-img
@@ -76,6 +85,50 @@
         span
             font-size: 35px
             line-height: 42px
+    .service-list 
+        margin: 0 -10px
+
+    .service-list__item 
+        padding: 0 10px
+
+    .service-list__item p, .contact-wrap p, .contact-list__item 
+        font-size: 14px
+        line-height: 22px
+
+    .box-pricing  
+        display: block
+
+    .box-pricing .service-list__item 
+        text-align: center
+        max-width: 80%
+        margin: 0 auto 50px
+
+    .box-pricing .service-list__icon 
+        margin-left: auto
+
+    .pricing 
+        margin-left: 0
+
+    .pricing__item 
+        width: auto
+        flex: 1
+
+    .contact-wrap__right 
+        padding-left: 30px
+
+    .clients-list__item a 
+        height: 115px
+
+    .footer-flex 
+        flex-direction: column
+
+    .footer-flex .social 
+        margin-left: 0
+        margin-bottom: 20px
+
+    .copyright 
+        order: 1
+        text-align: center
 
 @media only screen and (max-width : 767px)
     .wrapper
@@ -84,6 +137,12 @@
         padding: 40px 0
     .hr
         margin: 45px 0
+    ul.menu
+        display: block
+    .menu__item
+        margin-left: 0
+    .menu__link
+        font-size: 25px
     .heading
         display: block
         margin-bottom: 50px
@@ -97,6 +156,11 @@
                 margin: 10px auto 0
                 width: 45px
                 height: 4px
+    .banner-slider
+        h1
+            font-size: 50px
+        span
+            font-size: 30px
     .about-wrap-content
         display: block
         text-align: center
@@ -131,8 +195,63 @@
         margin-bottom: 20px
     .facts-list__icon
         margin: 0 auto 15px
+    .service-list 
+        display: block
+
+    .service-list__item, .box-pricing .service-list__item 
+        margin: 0 auto 40px
+        max-width: 420px
+
+    .pricing 
+        display: block
+        margin: 0 auto
+        max-width: 420px
+
+    .pricing__item:first-child 
+        border-right: 1px solid #e6e6e6
+        margin-top: 0px
+
+    .pricing__item:last-child 
+        border-left: 1px solid #e6e6e6
+        margin-top: 0px
+
+    .testimonial__text 
+        font-size: 18px
+        line-height: 24px
+
+    .contact-wrap 
+        display: block
+
+    .contact-wrap__left 
+        width: auto
+        margin-bottom: 40px
+
+    .contact-wrap__right 
+        padding-left: 0
+        width: auto
+
+    .clients-list 
+        display: block
+        text-align: center
+
+    .clients-list__item 
+        display: inline-block
+        vertical-align: top
+        width: 220px
+
+    #map 
+        height: 320px
+
+    #map::before, #map::after
+        display: none
+	
 
 @media only screen and (max-width : 479px)
+    .banner-slider
+        h1
+            font-size: 40px
+        span
+            font-size: 20px
     .quote__text 
         font-size: 16px
         line-height: 22px
